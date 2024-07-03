@@ -1,0 +1,29 @@
+# PostgreSQL
+#   gem 'pg'
+#
+#   Ensure the PostgreSQL gem is defined in your Gemfile
+#   gem 'pg'
+#
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  username: postgres
+  password: password
+  host: localhost
+
+development:
+  <<: *default
+  database: gpt_cloner
+
+test:
+  <<: *default
+  database: your_app_name_test
+
+production:
+  <<: *default
+  database: your_app_name_production
+  username: your_postgres_username
+  password: your_postgres_password
+  host: your_postgres_host
