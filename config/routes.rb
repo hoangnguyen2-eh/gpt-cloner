@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   # get "/users/:id", to: "user#getUserById"
   # Import the route for grape
   mount UserApi => '/api'
+  mount PromptApi => '/api'
 end

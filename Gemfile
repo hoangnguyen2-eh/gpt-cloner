@@ -35,6 +35,9 @@ gem 'grape-route-helpers'
 
 gem 'grape_has_scope'
 gem 'grape_logging'
+
+# JWT
+gem 'jwt'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
