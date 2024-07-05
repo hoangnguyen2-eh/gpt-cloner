@@ -44,5 +44,11 @@ class Prompt::PromptInteraction < Grape::API
             Prompt.create(value: prompt_text, user_id: User.find_by(username: userValidator.getUserName).id)
             return response
         end
+
+        desc 'Delete all prompt'
+        delete do
+            DeleteHistory.perform_in(1.seconds)
+            { message: 'OK' }
+        end
     end
 end
